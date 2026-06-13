@@ -62,6 +62,8 @@ const AdminUsers = () => {
   const [selectedHistoryEmployeeId, setSelectedHistoryEmployeeId] = useState(null);
   const [historyDateFilter, setHistoryDateFilter] = useState('');
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
   useEffect(() => {
     fetchLocations();
     const intervalId = setInterval(() => {
